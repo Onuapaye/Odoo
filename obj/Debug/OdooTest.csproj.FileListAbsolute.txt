@@ -1,0 +1,15 @@
+G:\Odoo\OdooTest\OdooTest\bin\Debug\OdooTest.exe.config
+G:\Odoo\OdooTest\OdooTest\bin\Debug\OdooTest.exe
+G:\Odoo\OdooTest\OdooTest\bin\Debug\OdooTest.pdb
+G:\Odoo\OdooTest\OdooTest\obj\Debug\OdooTest.csproj.CoreCompileInputs.cache
+G:\Odoo\OdooTest\OdooTest\obj\Debug\OdooTest.exe
+G:\Odoo\OdooTest\OdooTest\obj\Debug\OdooTest.pdb
+G:\Odoo\OdooTest\OdooTest\bin\Debug\HtmlAgilityPack.dll
+G:\Odoo\OdooTest\OdooTest\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+G:\Odoo\OdooTest\OdooTest\bin\Debug\WebDriver.dll
+G:\Odoo\OdooTest\OdooTest\bin\Debug\HtmlAgilityPack.pdb
+G:\Odoo\OdooTest\OdooTest\bin\Debug\HtmlAgilityPack.xml
+G:\Odoo\OdooTest\OdooTest\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+G:\Odoo\OdooTest\OdooTest\bin\Debug\WebDriver.xml
+G:\Odoo\OdooTest\OdooTest\obj\Debug\OdooTest.csproj.CopyComplete
+G:\Odoo\OdooTest\OdooTest\obj\Debug\OdooTest.csprojAssemblyReference.cache

@@ -1,0 +1,83 @@
+﻿Tables mentioned in the question with their attributes or properties
+
+proudct
+	id				primary_key
+	category_id		foreign_key
+	name
+	price
+	creation_date
+
+category
+	id				primary_key
+	name
+	is_public_private
+
+
+**** THE PSEUDO-SQL ****
+Asumming I am using MySQL
+
+	CREATE DATABASE the_name_of_the_database ends with a semi-column
+	CREATE DATABASE webshop;
+
+	// creation of the tables inside the database
+	Create table with a given name
+		open a bracket
+			create all the needed columns with their respective names, datatype(with size where necessary) and define other attributes such as null or not
+				indicate primary and foreign keys if any
+					close the open bracket
+						end the statement with a semi-column
+						
+	e.g
+	CREATE TABLE table_name
+	(
+		column1 data_type(size),
+		column2 data_type(size),
+		column3 data_type(size),
+		.
+		.
+		.
+		columnN data_type(size),
+	);
+
+	CREATE TABLE product
+	(
+		id					INT, NOT NUL, AUTO_INCREMENT,
+		category_id			INT,
+		product_name		VARCHAR(255), NOT NULL,
+		price				DECIMAL(11, 2), NOT NULL, DEFAULT 0,	
+		creation_date		DATETIME	// it can be a TIMESTAMP,
+		PRIMARY KEY (id)	// primary key,
+	);
+
+	CREATE TABLE category
+	(
+		id					INT, NOT NUL, AUTO_INCREMENT,
+		category_name		VARCHAR(255), NOT NULL,
+		is_private			TINYINT(1)	// when 0 private else public,
+		PRIMARY KEY (id)	// primary key
+	);
+
+	CREATE TABLE product_categories
+	(
+		category_id INT REFERENCES category (category_id) ON DELETE CASCADE,
+		product_id INT REFERENCES product (product_id) ON DELETE CASCASDE 
+		CONSTRAINT id PRIMARY KEY (category_id, product_id)
+	);
+
+
+**** SQL Query to find list of products
+USE webshop // asuming the schema name is as such
+
+SELECT 
+    odoo.product.id AS ID,
+    odoo.product.product_name AS `Product Name`,
+    odoo.product.price AS Price,
+    odoo.category.id AS Category,
+    odoo.category.is_private AS Private
+FROM
+    product,
+    category,
+    products_categories
+WHERE
+    (odoo.product.id = odoo.products_categories.product_id
+        AND odoo.category.id = odoo.products_categories.category_id) AND odoo.category.is_private = 1;
